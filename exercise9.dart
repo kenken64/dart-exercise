@@ -36,6 +36,15 @@ main(){
   if (y2 is! Person){
     print("I am not person");
   }
+
+  (y2 as Animal).animal_name = "Lola";
+  print(y2);
+
+  var value = 30;
+  var b;
+  var a  = value; // asssign value to a
+  b ??= value; // assign value to b if b is null; otherwise b stay the same.
+  print(b);
 }
 
 var elems = [1, 2, 3];
@@ -44,7 +53,7 @@ bool haveEleme(a) {
   return elems.indexOf(a) == 1 ?? false;
 }
 
-class Person {
+class Person{
   String name;
   String get person_name {
     return name;
@@ -55,5 +64,11 @@ class Person {
 }
 
 class Animal {
-
+  String name;
+  String get animal_name {
+    return name;
+  }
+  void set animal_name(String name){
+    this.name=  name;
+  }
 }
